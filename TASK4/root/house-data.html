@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>House Data</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body class="text-white" style="background-color:rgb(60,34,144);">
+
+    <!--Header-->
+    <header id="myHeader">
+    </header>
+
+    <!--NavBar-->
+    <nav id="myNav">
+    </nav>
+
+    <!--Paragraph-->
+    <div class="mt-5 container text-justify" id="paragraph">
+        <h2>Congressmen</h2>
+        <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+        <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+    </div>
+
+    <!-- Table container -->
+    <div class="mt-5 container" id="paragraph">
+        <div id="myFilterForm">
+        </div>
+        <table class="table table-striped  text-white-50 text-center" id="member_data">
+            <thead class="text-white font-weight-bold">
+                <tr>
+                    <th v-for='title in titles'>{{title}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for='members in data'>
+                    <td><a v-bind:href= (members.url==''?null:members.url) target='_blank'>{{ members.last_name }}, {{ members.first_name }} {{ members.middle_name }}</a></td>
+                    <td>{{ members.party }}</td>
+                    <td>{{ members.state }}</td>
+                    <td>{{ members.seniority }}</td>
+                    <td>{{ members.votes_with_party_pct.toFixed(2) }} %</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--Footer-->
+    <footer id="myFooter">
+    </footer>
+    
+    <!-- Assets Vue-->
+    <script src="assets/vue/DOMParts.js"></script>
+    <script src="assets/vue/data.js" chamber="house"></script>
+    <script src="assets/vue/filters.js"></script>
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

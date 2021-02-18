@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="myHead">
+    <title>House Data</title>
+</head>
+
+<body class="text-white" style="background-color:rgb(60,34,144);">
+
+    <!--Header-->
+    <header id="myHeader">
+    </header>
+
+    <!--NavBar-->
+    <nav id="myNav">
+    </nav>
+
+    <!--Paragraph-->
+    <div class="mt-5 container text-justify" id="paragraph">
+        <h2>Congressmen</h2>
+        <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+        <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+    </div>
+
+    <!--Table container-->
+    <div class="mt-5 container" id="paragraph">
+
+        <form name="filter" id="filterForm" action="method">
+            <div class="mt-3 float-left">
+                <label id="party"> Filter by party: </label>
+                <input type="checkbox" name="party" value="R" rel="republican" id="republican" checked onchange="refreshTable()" class="ml-3"><label for="republican"> Republican </label>
+                <input type="checkbox" name="party" value="D" rel="democrat" id="democrat" checked onchange="refreshTable()" class="ml-3"><label for="democrat"> Democrat </label>
+                <input type="checkbox" name="party" value="I" rel="independent" id="independent" checked onchange="refreshTable()" class="ml-3"><label for="independent"> Independent </label>
+            </div>
+            <div class="mt-3 float-right">
+                <label class="mr-3"> Filter by state: </label>
+                <select id="stateFilter" class="statefilter" name="stateFilter" onchange="refreshTable()">
+                </select>
+            </div>
+        </form>
+        <table class="table table-striped  text-white-50 text-center" id="house-data">
+            <thead class="text-white font-weight-bold">
+                <tr>
+                    <td>Senator</td>
+                    <td>Party</td>
+                    <td>State</td>
+                    <td>Seniority</td>
+                    <td>Votes with party</td>
+                </tr>
+            </thead>
+            <tbody id="sm">
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--Footer-->
+    <footer id="myFooter">
+    </footer>
+
+    <!-- Assets Js-->
+    <script src="assets/js/pro-congress-113-house.js"></script>
+    <script src="assets/js/constructors.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/DOMParts.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

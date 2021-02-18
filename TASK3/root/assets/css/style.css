@@ -1,0 +1,24 @@
+body {
+  background-image: url(https://i.postimg.cc/yx4cV327/capitol.png);
+  background-repeat:no-repeat;  
+  background-size:100%;
+  background-color: rgb(60,34,144);
+}
+
+nav,
+footer {
+  height: 50px;
+  -webkit-filter: drop-shadow(0px 5px 20px black);
+  text-align: center;
+}
+
+table {
+  background-color: rgba(60,34,144,0.6);
+  -webkit-filter: drop-shadow(0px 10px 20px black);
+}
+
+#paragraph {
+  text-shadow: 1px 1px black;
+  background-color:rgba(60,34,144,0.6);
+  -webkit-filter: drop-shadow(0px 10px 20px black);
+}

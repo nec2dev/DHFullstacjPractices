@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="myHead">
+    <title>Loyalty</title>
+</head>
+
+<body class="text-white" style="background-color:rgb(60,34,144);">
+
+    <!--Header-->
+    <header id="myHeader">
+    </header>
+
+    <!--NavBar-->
+    <nav id="myNav">
+    </nav>
+
+    <!--Table container-->
+    <div class="mt-5 pb-5 container" id="paragraph">
+        <div class="row">
+            <div class="text-justify col col-lg-6 float-left pt-5">
+                <h2>Party Loyalty</h2>
+                <p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda. </p>
+            </div>
+
+            <div class="text-justify col col-lg-6 float-right pt-5">
+                <h5 class="text-center text-white font-weight-bold">Senate at a glance</h5>
+                <table class="table table-striped  text-white-50 text-center float-right">
+                    <thead class="text-white font-weight-bold">
+                        <tr>
+                            <th>Party</th>
+                            <th>Number of Reps</th>
+                            <th>% Voted with Prty</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Republican</td>
+                            <td id="numReps">--</td>
+                            <td id="votReps">--</td>
+                        </tr>
+                        <tr>
+                            <td>Democrat</td>
+                            <td id="numDems">--</td>
+                            <td id="votDems">--</td>
+                        </tr>
+                        <tr>
+                            <td>Independent</td>
+                            <td id="numIdeps">--</td>
+                            <td id="votIdeps">--</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container border-top border-white pt-5" id="paragraph">
+        <div class="row">
+            <div class="text-justify col col-lg-6 float-left">
+                <h5 class="text-center text-white font-weight-bold">Least Loyal (Bottom 10% of Party)</h5>
+                <table class="table table-striped  text-white-50 text-center">
+                    <thead class="text-white font-weight-bold">
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="least-loyal">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="text-justify col col-lg-6 float-right">
+                <h5 class="text-center text-white font-weight-bold">Most Loyal (Top 10% of Party)</h5>
+                <table class="table table-striped  text-white-50 text-center">
+                    <thead class="text-white font-weight-bold">
+                        <tr>
+                            <th>Name</th>
+                            <th>Number Party Votes</th>
+                            <th>% Party Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="most-loyal">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer id="myFooter">
+    </footer>
+
+    <!-- Assets Js-->
+    <script src="assets/js/pro-congress-113-senate.js"></script>
+    <script src="assets/js/statistics.js"></script>
+    <script src="assets/js/statisticsFunctions.js"></script>
+    <script src="assets/js/DOMParts.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

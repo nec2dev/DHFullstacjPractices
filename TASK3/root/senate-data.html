@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="myHead">
+    <title>senateData</title>
+</head>
+
+<body class="text-white" style="background-color:rgb(60,34,144);">
+
+    <!--Header-->
+    <header id="myHeader">
+    </header>
+
+    <!--NavBar-->
+    <nav id="myNav">
+    </nav>
+
+    <!--Paragraph-->
+    <div class="mt-5 container text-justify" id="paragraph">
+        <h2>Senators</h2>
+        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+    </div>
+
+    <!--Table container-->
+    <div class="mt-5 container" id="paragraph">
+
+        <form name="filter" id="filterForm" action="method">
+            <div class="mt-3 float-left">
+                <label id="party"> Filter by party: </label>
+                <input type="checkbox" name="party" value="R" rel="republican" id="republican" checked onchange="refreshTable()" class="ml-3"><label for="republican"> Republican </label>
+                <input type="checkbox" name="party" value="D" rel="democrat" id="democrat" checked onchange="refreshTable()" class="ml-3"><label for="democrat"> Democrat </label>
+                <input type="checkbox" name="party" value="I" rel="independent" id="independent" checked onchange="refreshTable()" class="ml-3"><label for="independent"> Independent </label>
+            </div>
+            <div class="mt-3 float-right">
+                <label class="mr-3"> Filter by state: </label>
+                <select id="stateFilter" class="statefilter" name="stateFilter" onchange="refreshTable()">
+                </select>
+            </div>
+        </form>
+        <table class="table table-striped  text-white-50 text-center" id="senate-data">
+            <thead class="text-white font-weight-bold">
+                <tr>
+                    <td>Senator</td>
+                    <td>Party</td>
+                    <td>State</td>
+                    <td>Seniority</td>
+                    <td>Votes with party</td>
+                </tr>
+            </thead>
+            <tbody id="sm">
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--Footer-->
+    <footer id="myFooter">
+    </footer>
+
+    <!-- Assets Js-->
+    <script src="assets/js/pro-congress-113-senate.js"></script>
+    <script src="assets/js/constructors.js"></script>
+    <script src="assets/js/filters.js"></script>
+    <script src="assets/js/DOMParts.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
